@@ -79,4 +79,8 @@
     .row, .navbar {   
       flex-direction: column;
     }
+
+    .navbar {
+      position: relative;
+    }
   }
