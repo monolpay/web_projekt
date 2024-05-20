@@ -1,2 +1,0 @@
-Téma: motory
-Co tam bude: flexbox, slideshow, pexeso, dark mode
