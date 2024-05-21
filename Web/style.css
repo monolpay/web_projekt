@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-.loader {
+#loader {
   display: none;
 }
 
@@ -17,7 +17,6 @@ header {
     background: #1abc9c;
     background-image: url();
     color: white;
-    mix-blend-mode: hue;
 }
 
 .navbar {
