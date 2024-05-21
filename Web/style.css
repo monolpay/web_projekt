@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.loader {
+  display: none;
+}
+
 body {
     font-family: Arial;
     margin: 0;
@@ -11,6 +15,7 @@ header {
     padding: 60px;
     text-align: center;
     background: #1abc9c;
+    background-image: url();
     color: white;
     mix-blend-mode: hue;
 }
