@@ -1,4 +1,4 @@
-let images = 2
+let images = 6
 let currImg = Math.floor(Math.random()*images)
 function slide(){
     document.getElementsByTagName("header")[0].style.backgroundImage="url('./img/img"+currImg+".jpg')"
@@ -10,4 +10,4 @@ function slide(){
     
 }
 slide()
-setInterval(slide, 1000)
+setInterval(slide, 5000)
