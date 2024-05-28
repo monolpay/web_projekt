@@ -14,8 +14,10 @@ function draw(){
     cenY = posY + 40
     ctx.translate(cenX, cenY); // Posun na střed auta
     ctx.rotate((Math.PI/180)*direction)
-    ctx.drawImage(car, posX, posY, 80, 80)
     ctx.translate(0, 0);
+    ctx.drawImage(car, posX, posY, 80, 80)
+    ctx.fillRect(0, 0, 10, 10)
+    
 }
 
 
