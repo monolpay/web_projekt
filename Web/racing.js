@@ -20,8 +20,12 @@ function draw(){
     ctx.rotate((Math.PI/180)*direction)
     ctx.translate(-cenX, -cenY);
     ctx.drawImage(car, posX, posY, 80, 80)
+    ctx.fillRect(0, 0, 10, 10)
+    ctx.translate(cenX, cenY);
+    ctx.rotate((Math.PI/180)*-direction)
+    ctx.translate(-cenX, -cenY);
     posX += speedX
-    posY += speedY
+    posY += speedY 
     
 }
 
@@ -48,15 +52,19 @@ window.addEventListener("keydown", function (event){
     switch(event.key){
         case "ArrowRight":
             move(speed, 0)
+            rotate(90)
             break
         case "ArrowLeft":
             move(-speed, 0)
+            rotate(-90)
             break
         case "ArrowUp":
             move(0, -speed)
+            rotate(0)
             break
         case "ArrowDown":
             move(0, speed)
+            rotate(180)
             break
     }
 }, true)
