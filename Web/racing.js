@@ -20,7 +20,6 @@ function draw(){
     ctx.rotate((Math.PI/180)*direction)
     ctx.translate(-cenX, -cenY);
     ctx.drawImage(car, posX, posY, 80, 80)
-    ctx.fillRect(0, 0, 10, 10)
     ctx.translate(cenX, cenY);
     ctx.rotate((Math.PI/180)*-direction)
     ctx.translate(-cenX, -cenY);
