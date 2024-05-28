@@ -53,7 +53,15 @@ window.addEventListener("keydown", function (event){
             move(speed, 0)
             rotate(90)
             break
+        case "d":
+            move(speed, 0)
+            rotate(90)
+            break
         case "ArrowLeft":
+            move(-speed, 0)
+            rotate(-90)
+            break
+        case "a":
             move(-speed, 0)
             rotate(-90)
             break
@@ -61,7 +69,15 @@ window.addEventListener("keydown", function (event){
             move(0, -speed)
             rotate(0)
             break
+        case "w":
+            move(0, -speed)
+            rotate(0)
+            break
         case "ArrowDown":
+            move(0, speed)
+            rotate(180)
+            break
+        case "s":
             move(0, speed)
             rotate(180)
             break
