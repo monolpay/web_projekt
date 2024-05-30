@@ -29,8 +29,8 @@ function draw(){
 }
 
 
-function rotate(speed){
-    direction = speed
+function carRotate(rotation){
+    direction = rotation
 }
 
 function move(x, y){
@@ -50,35 +50,35 @@ window.addEventListener("keydown", function (event){
     switch(event.key){
         case "ArrowRight":
             move(speed, 0)
-            rotate(90)
+            carRotate(90)
             break
         case "d":
             move(speed, 0)
-            rotate(90)
+            carRotate(90)
             break
         case "ArrowLeft":
             move(-speed, 0)
-            rotate(-90)
+            carRotate(-90)
             break
         case "a":
             move(-speed, 0)
-            rotate(-90)
+            carRotate(-90)
             break
         case "ArrowUp":
             move(0, -speed)
-            rotate(0)
+            carRotate(0)
             break
         case "w":
             move(0, -speed)
-            rotate(0)
+            carRotate(0)
             break
         case "ArrowDown":
             move(0, speed)
-            rotate(180)
+            carRotate(180)
             break
         case "s":
             move(0, speed)
-            rotate(180)
+            carRotate(180)
             break
     }
 }, true)
