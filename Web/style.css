@@ -6,6 +6,12 @@
   display: none;
 }
 
+#game {
+    border: 1px solid;
+    position: relative;
+    left: calc(50% - 500px)
+}
+
 body {
     font-family: Arial;
     margin: 0;

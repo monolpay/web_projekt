@@ -5,7 +5,7 @@ const car = document.getElementById("car")
 let posX = 10
 let posY = 10
 
-let speed = 3
+let speed = 5
 let speedX = 0
 let speedY = 0
 
@@ -24,7 +24,7 @@ function draw(){
     ctx.rotate((Math.PI/180)*-direction)
     ctx.translate(-cenX, -cenY);
     posX += speedX
-    posY += speedY 
+    posY += speedY
     
 }
 
@@ -39,7 +39,6 @@ function move(x, y){
 }
 
 function stop(){
-    rotate(0)
     move(0, 0)
 }
 
@@ -84,6 +83,35 @@ window.addEventListener("keydown", function (event){
     }
 }, true)
 
-setInterval(draw, 1000/60)
+
+function collision(){
+    if(posX <= 0){
+        stop()
+        posX ++
+    }
+
+    if(posX >= canvas.width - 80){
+        stop()
+        posX --
+    }
+
+    if(posY <= 0){
+        stop()
+        posY ++
+    }
+
+    if(posY >= canvas.height - 80){
+        stop()
+        posY --
+    }
+}
+
+function update(){
+    draw()
+    collision()
+}
+
+setInterval(update, 1000/60)
     
 
+console.log(canvas.width, canvas.height)
