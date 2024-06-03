@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")
 const car = document.getElementById("car")
 const track = document.getElementById("track")
 
-let posX = 620
+let posX = 630
 let posY = 465
 
 
