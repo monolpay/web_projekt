@@ -32,24 +32,7 @@ header h1 {
     backdrop-filter: blur(2px);
 }
 
-.navbar {
-    display: flex;
-    background-color: #333;
-    position: sticky;
-    top: 0px;
-  }
 
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
 
 .row {  
     display: flex;
@@ -75,13 +58,57 @@ header h1 {
     background: #ddd;
 }
 
+.navbar {
+    display: flex;
+    background-color: #333;
+    position: sticky;
+    top: 0px;
+  }
+
+.navbar a {
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+#tl1, #tl3, #tl5{
+    color: #fc4100;
+}
+
+#tl2, #tl4{
+    color: #fff
+}
+
+#tl1:hover, #tl3:hover, #tl5:hover{
+    color: #fff;
+}
+
+#tl2:hover, #tl4:hover{
+    color: #fc4100;
+}
+
+.navbar a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #fc4100;
+    z-index: -1;
+    transition: 0.8s;
+}
+
 .img {
     border: 2px solid rgba(0, 0, 0,0);
 }
 
-  .img:hover{
+.img:hover{
     border-color: black;
-  }
+}
 
 @media screen and (max-width: 700px) {
   .row, .navbar {   
