@@ -4,7 +4,7 @@ const car = document.getElementById("car")
 const track = document.getElementById("track")
 
 let posX = 630
-let posY = 465
+let posY = 455
 
 
 let speed = 3
@@ -27,7 +27,7 @@ function draw(){
     ctx.translate(cenX, cenY); // Posun na střed auta
     ctx.rotate((Math.PI/180)*direction)
     ctx.translate(-cenX, -cenY);
-    ctx.drawImage(car, posX, posY, 80, 80)
+    ctx.drawImage(car, posX, posY, 65, 65)
     ctx.translate(cenX, cenY);
     ctx.rotate((Math.PI/180)*-direction)
     ctx.translate(-cenX, -cenY);
