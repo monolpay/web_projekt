@@ -1,11 +1,15 @@
+// Creates variables for sprites and canvas
 const canvas = document.getElementById("game")
 const ctx = canvas.getContext("2d")
 const car = document.getElementById("car")
 const track = document.getElementById("track")
 
-let posX = 630
-let posY = 455
 
+// Important starting parameters
+let posX = 630
+let posY = 470
+
+carSize = 65
 
 let speed = 3
 let speedX = 0
@@ -22,14 +26,14 @@ carRotate(-90)
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.drawImage(track, 0, 0, canvas.width, canvas.height)
-    cenX = posX + 40
-    cenY = posY + 40
-    ctx.translate(cenX, cenY); // Posun na střed auta
-    ctx.rotate((Math.PI/180)*direction)
-    ctx.translate(-cenX, -cenY);
-    ctx.drawImage(car, posX, posY, 65, 65)
-    ctx.translate(cenX, cenY);
-    ctx.rotate((Math.PI/180)*-direction)
+    cenX = posX + carSize / 2
+    cenY = posY + carSize / 2
+    ctx.translate(cenX, cenY); // Moves canvas center to car center
+    ctx.rotate((Math.PI/180)*direction) // Rotates canvas around that point
+    ctx.translate(-cenX, -cenY); // Moves canvas center to original position
+    ctx.drawImage(car, posX, posY, carSize, carSize)
+    ctx.translate(cenX, cenY); 
+    ctx.rotate((Math.PI/180)*-direction) // Rotates everything back to original
     ctx.translate(-cenX, -cenY);
     posX += speedX
     posY += speedY
@@ -41,6 +45,7 @@ function carRotate(rotation){
     direction = rotation
 }
 
+
 function move(x, y){
     speedX = x
     speedY = y
@@ -50,6 +55,7 @@ function stop(){
     move(0, 0)
 }
 
+// Gets user input
 window.addEventListener("keydown", function (event){
     if (event.defaultPrevented) {
         return;
@@ -91,7 +97,7 @@ window.addEventListener("keydown", function (event){
     }
 }, true)
 
-
+// Stops car from leaving the canvas area
 function collision(){
     if(posX <= 0){
         stop()
@@ -114,12 +120,11 @@ function collision(){
     }
 }
 
+// Updates everything on the screen
 function update(){
     draw()
     collision()
 }
 
+// Sets game tick rate to 60tps
 setInterval(update, 1000/60)
-    
-
-console.log(canvas.width, canvas.height)
