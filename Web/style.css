@@ -75,7 +75,17 @@ header h1 {
     overflow: hidden;
 }
 
-#tl1, #tl3, #tl5{
+.navbar a{
+    color: #fff;
+}
+
+.navbar a:hover{
+    color: #fc4100;
+}
+
+
+/* Cenim snahu, ale je to strašně matoucí a ta červená na černé je docela nečitelná. Líbí se mi ten hover, tak jsem ho udělal jednotný */
+/* #tl1, #tl3, #tl5{ 
     color: #fc4100;
 }
 
@@ -89,7 +99,7 @@ header h1 {
 
 #tl2:hover, #tl4:hover{
     color: #fc4100;
-}
+} */
 
 .navbar a::before{
     content: "";
