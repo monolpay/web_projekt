@@ -1,19 +1,27 @@
 const canvas = document.getElementById("game")
 const ctx = canvas.getContext("2d")
 const car = document.getElementById("car")
+const track = document.getElementById("track")
 
-let posX = 10
-let posY = 10
+let posX = 620
+let posY = 465
 
-let speed = 5
+
+let speed = 3
 let speedX = 0
 let speedY = 0
 
 let cenX = posX + 40
 let cenY = posY + 40
 let direction = 0
+
+
+carRotate(-90)
+
+
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.drawImage(track, 0, 0, canvas.width, canvas.height)
     cenX = posX + 40
     cenY = posY + 40
     ctx.translate(cenX, cenY); // Posun na střed auta
