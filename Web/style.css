@@ -12,6 +12,19 @@
     left: calc(50% - 500px)
 }
 
+#gameNotSupported {
+    color: #333;
+    text-align: center;
+    width: auto;
+    height: 250px;
+    display: none;
+
+}
+
+#gameNotSupported p {
+    padding: 100px 0;
+}
+
 body {
     font-family: Arial;
     margin: 0;
@@ -110,4 +123,27 @@ header h1 {
   .navbar {
       position: relative;
   }
+
+  canvas {
+    height: 300px;
+    width: 500px;
+    display: none;
 }
+
+#gameNotSupported {
+    display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+  
+    canvas {
+      height: 300px;
+      width: 500px;
+  }
+
+  #game {
+    left: calc(50% - 150px)
+  }
+  }

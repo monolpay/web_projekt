@@ -94,6 +94,8 @@ window.addEventListener("keydown", function (event){
             move(0, speed)
             carRotate(180)
             break
+        case " ":
+            stop()
     }
 }, true)
 
@@ -104,7 +106,7 @@ function collision(){
         posX ++
     }
 
-    if(posX >= canvas.width - 80){
+    if(posX >= canvas.width - carSize){
         stop()
         posX --
     }
@@ -114,7 +116,7 @@ function collision(){
         posY ++
     }
 
-    if(posY >= canvas.height - 80){
+    if(posY >= canvas.height - carSize){
         stop()
         posY --
     }
