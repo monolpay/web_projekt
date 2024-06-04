@@ -3,13 +3,15 @@ const canvas = document.getElementById("game")
 const ctx = canvas.getContext("2d")
 const car = document.getElementById("car")
 const track = document.getElementById("track")
+const burnout = document.getElementById("burnout")
 
 
 // Important starting parameters
 let posX = 630
 let posY = 470
 
-carSize = 65
+let carSize = 65
+let burnouted = false
 
 let speed = 3
 let speedX = 0
@@ -31,7 +33,13 @@ function draw(){
     ctx.translate(cenX, cenY); // Moves canvas center to car center
     ctx.rotate((Math.PI/180)*direction) // Rotates canvas around that point
     ctx.translate(-cenX, -cenY); // Moves canvas center to original position
-    ctx.drawImage(car, posX, posY, carSize, carSize)
+    if(burnouted){
+        ctx.drawImage(burnout, posX - 25, posY - 25, carSize + 50, carSize + 50)
+    }
+    else {
+        ctx.drawImage(car, posX, posY, carSize, carSize)
+    }
+    
     ctx.translate(cenX, cenY); 
     ctx.rotate((Math.PI/180)*-direction) // Rotates everything back to original
     ctx.translate(-cenX, -cenY);
@@ -95,7 +103,21 @@ window.addEventListener("keydown", function (event){
             carRotate(180)
             break
         case " ":
+            speed = 1
+            burnouted = true
             stop()
+    }
+}, true)
+
+window.addEventListener("keyup", function (event){
+    if (event.defaultPrevented) {
+        return;
+    }
+    
+    switch(event.key){
+        case " ":
+            speed = 3
+            burnouted = false
     }
 }, true)
 
