@@ -1,73 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Zážehový motor</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="./img/favicon.png">
-</head>
-<body>
+  <head>
+    <title>Zážehový motor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon.png">
+  </head>
+  <body>
 
   <!-- header img loader -->
-  <div id="loader">
-    <img src="./img/img0.jpg" alt="">
-    <img src="./img/img1.jpg" alt="">
-    <img src="./img/img2.jpg" alt="">
-    <img src="./img/img3.jpg" alt="">
-    <img src="./img/img4.jpg" alt="">
-    <img src="./img/img5.jpg" alt="">
-    <img src="./img/car.png" alt="">
+    <div id="loader">
+      <img src="./img/img0.jpg" alt="">
+      <img src="./img/img1.jpg" alt="">
+      <img src="./img/img2.jpg" alt="">
+      <img src="./img/img3.jpg" alt="">
+      <img src="./img/img4.jpg" alt="">
+      <img src="./img/img5.jpg" alt="">
+      <img src="./img/car.png" alt="">
 
-    <img src="./img/car.png" alt="" id="car">
-    <img src="./img/draha.png" alt="" id="track">
-    <img src="./img/burnout.png" alt="" id="burnout">
-  </div>
+      <img src="./img/car.png" alt="" id="car">
+      <img src="./img/draha.png" alt="" id="track">
+      <img src="./img/burnout.png" alt="" id="burnout">
+    </div>
 
+  <!-- Header -->
+    <header>
+      <h1>Motory</h1>
+    </header>
 
-<!-- Header -->
-<header>
-  <h1>Motory</h1>
-</header>
+  <!-- Navigace -->
+    <div class="navbar">
+      <a id="tl1" href="index.html">Domů</a>
+      <a id="tl2" href="vznetovy.html">Vznětový motor</a>
+      <a id="tl3" href="zazehovy.html">Zážehový motor</a>
+      <a id="tl4" href="raketovy.html">Raketový motor</a>
+      <a id="tl5" href="zavodit.html">Závodit</a>
+    </div>
 
- 
-</div>
+  <!-- Horní panel -->
+    <div class="row">
+      <div class="animace">
+        <h1>Vyzkoušejte motor aplikovaný v praxi</h1>
+        <p>V tomto simulátoru si můžete vyzkoušet jezdit s autem 4 směry. Je to nejčastější a nejdůležitější aplikace motoru v reálném světě. Bez něj by transport jaký známe dnes neexistoval.</p>
+        <p>Pro řízení auta použijte tlačítka W, A, S, D. Pro zastavení stiskněte mezerník.</p>
+      </div>  
+    </div>
 
-<!-- Navigace -->
-<div class="navbar">
-  <a id="tl1" href="index.html">Domů</a>
-  <a id="tl2" href="vznetovy.html">Vznětový motor</a>
-  <a id="tl3" href="zazehovy.html">Zážehový motor</a>
-  <a id="tl4" href="raketovy.html">Raketový motor</a>
-  <a id="tl5" href="zavodit.html">Závodit</a>
-</div>
+    <canvas id="game" width="1000" height="600px"></canvas>
+    <div id="gameNotSupported">
+      <p>Omlouváme se, ale na vašem zařízení není hra podporována.</p>
+    </div>
 
-
-  <!-- Hlavní tělo stránky -->
-
-
-
-<!-- Horní panel -->
-<div class="row">
-  <div class="animace">
-    <h1>Vyzkoušejte motor aplikovaný v praxi</h1>
-    <p>V tomto simulátoru si můžete vyzkoušet jezdit s autem 4 směry. Je to nejčastější a nejdůležitější aplikace motoru v reálném světě. Bez něj by transport jaký známe dnes neexistoval.</p>
-    <p>Pro řízení auta použijte tlačítka W, A, S, D. Pro zastavení stiskněte mezerník.</p>
-  </div>  
-  </div>
-
-<canvas id="game" width="1000" height="600px"></canvas>
-<div id="gameNotSupported">
-  <p>Omlouváme se, ale na vašem zařízení není hra podporována.</p>
-</div>
-
-
-<!-- Footer -->
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
-</body>
+  <!-- Footer -->
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  </body>
 </html>
 <script src="script.js"></script>
 <script src="racing.js"></script>
