@@ -13,7 +13,7 @@ let posY = 470
 let carSize = 65
 let burnouted = false
 
-let speed = 3
+let speed = 0
 let speedX = 0
 let speedY = 0
 
@@ -26,6 +26,12 @@ carRotate(-90)
 
 
 function draw(){
+    if(speed > 6){
+        speed = 6
+    }
+    if(speed < 0){
+        speed = 0
+    }
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.drawImage(track, 0, 0, canvas.width, canvas.height)
     cenX = posX + carSize / 2
@@ -45,6 +51,7 @@ function draw(){
     ctx.translate(-cenX, -cenY);
     posX += speedX
     posY += speedY
+    document.getElementById("prevod").textContent="Převod: "+speed
     
 }
 
@@ -67,6 +74,14 @@ function stop(){
 window.addEventListener("keydown", function (event){
     if (event.defaultPrevented) {
         return;
+    }
+
+    if(event.shiftKey) {
+        speed ++
+    }
+
+    if(event.ctrlKey){
+        speed --
     }
     
     switch(event.key){
@@ -107,6 +122,7 @@ window.addEventListener("keydown", function (event){
             burnouted = true
             stop()
     }
+    
 }, true)
 
 window.addEventListener("keyup", function (event){
