@@ -71,6 +71,17 @@ header h1 {
     background: #ddd;
 }
 
+#kontakty{
+    float: left;
+}
+
+#logo{
+    height: 200px;
+}
+#skola{
+    float: right;
+}
+
 .navbar {
     display: flex;
     background-color: #333;
